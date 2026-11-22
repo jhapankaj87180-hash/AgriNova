@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Now | AgriNova</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+body{
+background:#F8FFF8;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+.container{
+width:450px;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+h1{
+text-align:center;
+color:#16A34A;
+margin-bottom:10px;
+}
+
+p{
+text-align:center;
+color:#666;
+margin-bottom:25px;
+}
+
+input, select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#16A34A;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#15803D;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Join AgriNova</h1>
+
+<p>Become a part of the smart farming revolution.</p>
+
+<form id="joinForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option value="">Select Role</option>
+<option>Farmer</option>
+<option>Agribusiness Owner</option>
+<option>Researcher</option>
+<option>Investor</option>
+</select>
+
+<button type="submit">
+Join Now
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+document.getElementById("joinForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Welcome to AgriNova! Thank you for joining us.");
+
+});
+
+</script>
+
+</body>
+</html>

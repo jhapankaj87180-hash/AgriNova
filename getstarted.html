@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Started | AgriNova</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:seashell;}
+/* HEADER */
+header{position:fixed;top:0;left:0;width:100%;background:black;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 15px rgba(0,0,0,.08);z-index:1000;}
+.logo{font-size:32px;font-weight:700;color:#16A34A;}
+.logo span{color:orange;}
+nav ul{display:flex;list-style:none;gap:35px;}
+nav ul li a{text-decoration:none;color:#333;font-weight:500;}
+nav ul li a:hover{color: green;}
+.btn{background:#16A34A;color:white;padding:12px 25px;border-radius:30px;text-decoration:none;}
+.btn:hover{color: gold;}
+/* HERO */
+.hero{margin-top:90px;min-height:45vh;display:flex;justify-content:center;align-items:center;text-align:center;background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReC2cO7lLVd0MkryaGMrOGvXa6kr0aIWBK8m5meF_WVw&s=10');background-repeat: no-repeat;background-size: cover;background-position: center;color: orange;padding:30px;border: 2px solid black;}
+.hero h1{font-size:60px;margin-bottom:15px;}
+.hero p{font-size:20px;max-width:700px;margin:auto;}
+/* FORM SECTION */
+.form-section{padding:100px 8%;}
+.form-container{max-width:700px;margin:auto;background: black;padding:40px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08);}
+.form-container h2{text-align:center;margin-bottom:25px;color:white;}
+.form-container input,.form-container select,.form-container textarea{width:100%;padding:15px;margin-bottom:20px;border:1px solid #ddd;border-radius:10px;outline:none;}
+.form-container button{width:100%;background:#16A34A;color:white;border:none;padding:15px;border-radius:30px;font-size:16px;cursor:pointer;}
+/* BENEFITS */
+.benefits{padding:80px 8%;background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbEQ3MByfJxg0ndcYWcPfrUjLNDbZ5hugI5Lw9j8OVIg&s=10');background-repeat: no-repeat;background-size: cover;background-position: center;}
+.title{text-align:center;font-size:42px;margin-bottom:50px;color:#14532D;}
+.benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.benefit-card{background:white;padding:30px;text-align:center;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08);border: 2px solid black;}
+.benefit-card h3{color:#16A34A;margin-bottom:15px;}
+/* FOOTER */
+footer{background:#0F172A;color:wheat;padding:50px 8%;}
+.footer-container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
+.footer-logo{font-size:28px;font-weight:bold;color: green;}
+.footer-logo span{color: orange;}
+.footer-links a{display:block;color:wheat;text-decoration:none;margin:10px 0;}
+.footer-links a:hover{color: orange;}
+.footer-links h3{color: green;}
+.contact h3{color: green;}
+.copyright{margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;color:white;}
+@media(max-width:900px){
+nav{display:none;}
+.hero h1{font-size:42px;}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🌱 Agri<span>Nova</span></div>
+<nav>
+<ul>
+<li><a href="./index.html">Home</a></li>
+<li><a href="./about.html">About</a></li>
+<li><a href="./service.html">Services</a></li>
+<li><a href="./solutions.html">Solutions</a></li>
+<li><a href="./contact.html">Contact</a></li>
+</ul>
+</nav>
+<a href="./getstarted.html" class="btn">
+Get Started
+</a>
+</header>
+<section class="hero">
+<div>
+<h1>Start Your Smart Farming Journey</h1>
+<p>Join AgriNova and unlock the power of AI, IoT and smart agriculture solutions.</p>
+</div>
+</section>
+<section class="form-section">
+<div class="form-container">
+<h2>Register With AgriNova</h2>
+<form id="registerForm">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="text" placeholder="Farm Location">
+<select>
+<option>Select Farm Size</option>
+<option>Small Farm</option>
+<option>Medium Farm</option>
+<option>Large Farm</option>
+</select>
+<textarea rows="5" placeholder="Tell us about your farming needs"></textarea>
+<button type="submit">
+Create Account
+</button>
+</form>
+</div>
+</section>
+<section class="benefits">
+<h2 class="title">Why Join AgriNova?</h2>
+<div class="benefit-grid">
+<div class="benefit-card">
+<h3>🌱 Smart Farming</h3>
+<p>AI powered recommendations for better crop growth.</p>
+</div>
+<div class="benefit-card">
+<h3>💧 Save Water</h3>
+<p>Efficient irrigation and resource management.</p>
+</div>
+<div class="benefit-card">
+<h3>📈 Increase Yield</h3>
+<p>Boost productivity with intelligent insights.</p>
+</div>
+<div class="benefit-card">
+<h3>🛰 Real-Time Monitoring</h3>
+<p>Track your farm from anywhere.</p>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-container">
+<div>
+<div class="footer-logo">🌱 Agri<span>Nova</span></div>
+<p>Smart Farming. Sustainable Future.</p>
+</div>
+<div class="footer-links">
+<h3>Quick Links</h3>
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./service.html">Services</a>
+<a href="./solutions.html">Solutions</a>
+<a href="./contact.html">Contact</a>
+</div>
+<div class="contact">
+<h3>Contact</h3>
+<p>hello@agrinova.com</p>
+<p>+91 9876543210</p>
+<p>Indore, Madhya Pradesh, India</p>
+</div>
+</div>
+<div class="copyright">
+© 2026 AgriNova. All Rights Reserved.
+</div>
+</footer>
+<script>
+document.getElementById("registerForm")
+.addEventListener("submit",function(e){
+e.preventDefault();
+alert("Welcome to AgriNova! Registration submitted successfully.");
+});
+</script>
+</body>
+</html>

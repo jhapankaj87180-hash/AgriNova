@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions | AgriNova</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:seashell;}
+/* HEADER */
+header{position:fixed;top:0;left:0;width:100%;background:black;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 15px rgba(0,0,0,0.08);z-index:1000;}
+.logo{font-size:32px;font-weight:700;color:#16A34A;}
+.logo span{color:orange;}
+nav ul{display:flex;list-style:none;gap:35px;}
+nav ul li a{text-decoration:none;color:#333;font-weight:500;transition:.3s;}
+nav ul li a:hover,
+nav ul li a.active{color:#16A34A;}
+.btn{background:#16A34A;color:white;padding:12px 25px;border-radius:30px;text-decoration:none;}
+.btn:hover{color: gold}
+/* HERO */
+.solutions-hero{margin-top:90px;min-height:55vh;background:linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvmmvtB8zZtX-GcK2ytph0QDyMLlnaMWzCr6SfCCCfzQ&s=10");background-size:cover;background-position:center;display:flex;justify-content:center;align-items:center;text-align:center;color:white;padding:30px;}
+.solutions-hero h1{font-size:65px;margin-bottom:15px;}
+.solutions-hero p{font-size:20px;max-width:800px;margin:auto;line-height:1.8;}
+/* SECTION */
+.section-title{text-align:center;font-size:42px;color:#14532D;margin-bottom:60px;}
+/* SOLUTIONS */
+.solutions{padding:100px 8%;}
+.solution-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
+.solution-card{background:orange;padding:35px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.3s;}
+.solution-card:hover{transform:translateY(-10px);
+.solution-card h3{color:#16A34A;margin-bottom:15px}
+.solution-card p{color:#555;line-height:1.8;}
+/* INDUSTRIES */
+.industries{background:#ECFDF5;padding:100px 8%;}
+.industry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;
+.industry-card{background:green;padding:30px;border-radius:20px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.08);}
+.industry-card h3{color:orange;margin-bottom:15px;}
+/* BENEFITS */
+.benefits{padding:100px 8%;}
+.benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.benefit-card{background: gold;padding:30px;border-radius:20px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.08);}
+.benefit-card h3{color:#16A34A;margin-bottom:15px;}
+/* CTA */.cta{background:#16A34A;color:black;text-align:center;padding:100px 8%;}
+.cta h2{font-size:42px;margin-bottom:20px;}
+.cta p{margin-bottom:30px;}
+.cta a{background:white;color:#16A34A;text-decoration:none;padding:15px 35px;border-radius:30px;font-weight:600;}
+/* FOOTER */
+footer{background:#0F172A;color:wheat;padding:50px 8%;}
+.footer-container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
+.footer-logo{font-size:28px;font-weight:bold;color: green;}
+.footer-logo span{color: orange;}
+.footer-links a{display:block;color:wheat;text-decoration:none;margin:10px 0;}
+.footer-links a:hover{color: orange;}
+.footer-links h3{color: green;}
+.footer-links a:hover{color:#22C55E;}
+.contact h3{color: green;}
+.copyright{margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;color: white;}
+@media(max-width:900px){nav{display:none;}.solutions-hero h1{font-size:42px;}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">
+🌱 Agri<span>Nova</span>
+</div>
+<nav>
+<ul>
+<li><a href="./index.html">Home</a></li>
+<li><a href="./about.html">About</a></li>
+<li><a href="./service.html">Services</a></li>
+<li><a href="./solutions.html" class="active">Solutions</a></li>
+<li><a href="./contact.html">Contact</a></li>
+</ul>
+</nav>
+<a href="./getstarted.html" class="btn">Get Started</a>
+</header>
+<section class="solutions-hero">
+<div>
+<h1> Smart Solutions For Modern Farming</h1>
+<p> AgriNova provides intelligent agricultural solutions that help farmerssolve real-world challenges using AI, IoT, satellite monitoring anddata-driven technologies.</p>
+</div>
+</section>
+<section class="solutions">
+<h2 class="section-title">
+Our Agricultural Solutions
+</h2>
+<div class="solution-grid">
+<div class="solution-card">
+<h3>🌾 Low Crop Productivity</h3>
+<p> Improve crop performance using AI-powered recommendations,soil insights and predictive analytics.</p>
+</div>
+<div class="solution-card">
+<h3>💧 Water Management</h3>
+<p> Reduce water wastage through smart irrigation systems andautomated watering schedules.</p>
+</div>
+<div class="solution-card">
+<h3>🦠 Disease Prevention</h3>
+<p> Detect crop diseases early using image recognition andmachine learning technologies.</p>
+</div>
+<div class="solution-card">
+<h3>📊 Farm Analytics</h3>
+<p> Get complete farm performance reports with real-timedashboards and actionable insights.</p>
+</div>
+<div class="solution-card">
+<h3>🌦 Climate Challenges</h3>
+<p> Receive weather alerts and smart recommendations toprotect crops from extreme conditions.</p>
+</div>
+<div class="solution-card">
+<h3>🚜 Precision Farming</h3>
+<p> Optimize every farming activity through data-driven andresource-efficient practices.</p>
+</div>
+</div>
+</section>
+<section class="industries">
+<h2 class="section-title">
+    Who We Help
+</h2>
+<div class="industry-grid">
+<div class="industry-card">
+<h3>🌱 Small Farmers</h3>
+<p> Affordable technologies designed for small and medium farms.</p>
+</div>
+<div class="industry-card">
+<h3>🚜 Commercial Farms</h3>
+<p> Large-scale farm management with advanced analytics.</p>
+</div>
+<div class="industry-card">
+<h3>🏢 Agribusinesses</h3>
+<p> Smart insights for agricultural enterprises and cooperatives.</p>
+</div>
+<div class="industry-card">
+<h3>🎓 Research Institutes</h3>
+<p> Accurate agricultural data for innovation and research.</p>
+</div>
+</div>
+</section>
+<section class="benefits">
+<h2 class="section-title">
+Benefits Of AgriNova
+</h2>
+<div class="benefit-grid">
+<div class="benefit-card">
+<h3>📈 Higher Yield</h3>
+<p> Increase productivity with data-backed farming decisions.</p>
+</div>
+<div class="benefit-card">
+<h3>💰 Lower Costs</h3>
+<p> Reduce resource consumption and operational expenses.</p>
+</div>
+<div class="benefit-card">
+<h3>🌍 Sustainability</h3>
+<p> Promote environmentally responsible farming practices.</p>
+</div>
+<div class="benefit-card">
+<h3>⚡ Better Decisions</h3>
+<p>Access real-time insights and intelligent recommendations.</p>
+</div>
+</div>
+</section>
+<section class="cta">
+<h2> Ready To Upgrade Your Farm?</h2>
+<p> Discover smarter farming solutions designed for the future.</p>
+<a href="./getstarted.html">
+Get Started Today
+</a>
+</section>
+<footer>
+<div class="footer-container">
+<div>
+<div class="footer-logo">
+🌱 Agri<span>Nova</span>
+</div>
+<p> Smart Farming. Sustainable Future.</p>
+</div>
+<div class="footer-links">
+<h3>Quick Links</h3>
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./service.html">Services</a>
+<a href="./solutions.html">Solutions</a>
+<a href="./contact.html">Contact</a>
+</div>
+<div class="contact">
+<h3>Contact</h3>
+<p>hello@agrinova.com</p>
+<p>+91 9876543210</p>
+<p>Indore, Madhya Pradesh, India</p>
+</div>
+</div>
+<div class="copyright">
+© 2026 AgriNova. All Rights Reserved.
+</div>
+</footer>
+</body>
+</html>

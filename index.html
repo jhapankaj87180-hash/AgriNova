@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriNova | Smart Farming Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background: seashell;}
+/* Navbar */
+header{position:fixed;top:0;left:0;width:100%;background:black;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 15px rgba(0,0,0,0.08);z-index:1000;}
+.logo{font-size:32px;font-weight:700;color:#16A34A;}
+.logo span{color: orange;}
+nav ul{display:flex;list-style:none;gap:35px;}
+nav ul li a{text-decoration:none;color: wheat;font-weight:500;transition:.3s;}
+nav ul li a:hover,
+nav ul li a.active{color:#16A34A;}
+.btn{background:#16A34A;color: white;padding:12px 25px;border-radius:30px;text-decoration:none;}
+.btn:hover{color: gold;}
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;padding:120px 8%;}
+.hero-text{max-width:600px;}
+.hero-text h1{font-size:65px;line-height:1.2;color:#14532D;margin-bottom:20px;}
+.hero-text p{font-size:18px;color: black;line-height:1.8;margin-bottom:30px;}
+.hero-buttons{display:flex;gap:15px;}
+.primary-btn{background:#16A34A;color:white;padding:15px 30px;border-radius:30px;text-decoration:none;border: 2px solid black;}
+.primary-btn:hover{color: coral;}
+.secondary-btn{border:2px solid black;color:#16A34A;padding:15px 30px;border-radius:30px;text-decoration:none;}
+.secondary-btn:hover{color: dodgerblue;}
+.hero-image img{width:600px;max-width:100%;border: 2px solid black;}
+.hero-image img:hover{border-color: green;}
+/* Features */
+.features{padding:100px 8%;}
+.section-title{text-align:center;font-size:40px;color:#14532D;margin-bottom:60px;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background: orange;padding:35px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.08);text-align:center;transition:.3s;}
+.card:hover{transform:translateY(-10px);}
+.card h3{margin:15px 0;color:#16A34A;}
+/* CTA */
+.cta{background:green;padding:100px 8%;text-align:center;color: white;}
+.cta h2{font-size:45px;margin-bottom:20px;}
+.cta h2 span{color: orange;}
+.cta p{margin-bottom:30px;}
+.cta a{background:white;color:#16A34A;padding:15px 35px;border-radius:30px;text-decoration:none;font-weight:600;}
+.cta a:hover{background-color: orange;}
+/* Footer */
+footer{background:#0F172A;color:white;padding:50px 8%;}
+.footer-container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
+.footer-logo{font-size:28px;font-weight:bold;color: green;}
+.footer-logo span{color: orange;}
+.logo-p{color: wheat;}
+.footer-links a{display:block;color:wheat;text-decoration:none;margin:10px 0;}
+.footer-links a:hover{color: orange;}
+.footer-links h3{color: green;}
+.contact h3{color: green;}
+.contact p{color: wheat;}
+.copyright{margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;color: white;}
+
+/* Pricing Plans */
+.pricing{padding:90px 8%;background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vxDCxVefVtfqzKZ5cAQlelyvOIk_QgeDjZP9dYwbXA&s=10');
+ background-repeat: no-repeat; background-size: cover; background-position: center;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px;}
+.price-card{background:#fff;padding:32px 25px;border-radius:18px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.08);border:1px solid #dcfce7;}
+.price-card.featured{border:2px solid #16a34a;transform:translateY(-8px);}
+.price-card h3{color:#14532d;font-size:23px;margin-bottom:12px;}
+.price{font-size:34px;font-weight:700;color:#16a34a;margin:15px 0;}
+.price small{font-size:14px;color:#64748b;font-weight:400;}
+.price-card ul{list-style:none;line-height:2.1;margin:18px 0 25px;color:#334155;}
+.price-card .plan-btn{display:inline-block;background:#16a34a;color:white;text-decoration:none;padding:11px 24px;border-radius:25px;}
+.price-card .plan-btn:hover{background:#14532d;}
+/* Testimonials */
+.testimonials{padding:90px 8%;}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px;}
+.testimonial-card{background: red;border-radius:18px; border: 2px solid black; padding:30px;box-shadow:0 8px 25px rgba(0,0,0,.07);}
+.testimonial-card .stars{color:#e99a00;font-size:20px;letter-spacing:2px;}
+.testimonial-card p{color:#334155;line-height:1.8;margin:15px 0;}
+.testimonial-card h3{color:#14532d;}
+.testimonial-card small{color:#64748b;}
+.demo-note{text-align:center;color:#64748b;font-size:13px;margin-top:18px;}
+
+/* FAQ Accordion */
+.faq{padding:90px 8%;background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE2Re8RQZHsDL6vLWxM-jLTlZiOEM1FS33YDTSgSo1iQ&s=10');
+background-repeat: no-repeat; background-size: cover; background-position: bottom;}
+.faq-list{max-width:850px;margin:auto;}
+.faq-item{background:white;border-radius:12px;margin-bottom:14px;box-shadow:0 4px 15px rgba(0,0,0,.06);overflow:hidden;}
+.faq-question{width:100%;border:0;background:white;padding:20px 22px;text-align:left;font:600 17px 'Poppins',sans-serif;color:#14532d;cursor:pointer;display:flex;justify-content:space-between;gap:15px;}
+.faq-question span{font-size:22px;line-height:1;}
+.faq-answer{display:none;padding:0 22px 20px;color:#475569;line-height:1.8;}
+.faq-item.open .faq-answer{display:block;}
+.faq-item.open .faq-question span{transform:rotate(45deg);}
+@media(max-width:600px){.pricing,.testimonials,.faq{padding:65px 5%;}.price-card.featured{transform:none;}.section-title{font-size:30px;}}
+@media(max-width:900px){.hero-text h1{font-size:45px;}.hero-buttons{justify-content:center;}nav{display:none;}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">
+🌱 Agri<span>Nova</span>
+</div>
+<nav>
+<ul>
+<li><a href="./index.html">Home</a></li>
+<li><a href="./about.html">About</a></li>
+<li><a href="./service.html">Services</a></li>
+<li><a href="./solutions.html">Solutions</a></li>
+<li><a href="./contact.html">Contact</a></li>
+</ul>
+</nav>
+<a href="./getstarted.html" class="btn">Get Started</a>
+</header>
+<section class="hero">
+<div class="hero-text">
+<h1>Future of Farming Starts With AgriNova</h1>
+<p>AI-powered agriculture platform helping farmers grow smarter,save water, monitor crops and maximize yield throughmodern technology.</p>
+<div class="hero-buttons">
+<a href="./startfree.html" class="primary-btn">
+Start Free
+</a>
+<a href="./watchdemo.html" class="secondary-btn">
+Watch Demo
+</a>
+</div>
+</div>
+<div class="hero-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs9AD7rcAO1RPdB2od8jsm8F11jz8OzDdHwr7E2qDy-Q&s=10" alt="Agriculture">
+</div>
+</section>
+<section class="features">
+<h2 class="section-title">
+Why Choose AgriNova?
+</h2>
+<div class="feature-grid">
+<div class="card">
+<h3>🌾 Smart Monitoring</h3>
+<p>Track crop growth with AI-powered analytics.</p>
+</div>
+<div class="card">
+<h3>💧 Smart Irrigation</h3>
+<p>Save water through intelligent automation.</p>
+</div>
+<div class="card">
+<h3>📊 Yield Prediction</h3>
+<p>Get accurate production forecasts.</p>
+</div>
+<div class="card">
+<h3>🛰️ Satellite Insights</h3>
+<p>Monitor farm health in real-time.</p>
+</div>
+</div>
+</section>
+<section class="pricing" id="pricing">
+<h2 class="section-title">Simple &amp; Flexible Pricing</h2>
+<div class="pricing-grid">
+<div class="price-card">
+<h3>Basic</h3><p>For small farms getting started</p>
+<div class="price">₹499 <small>/ month</small></div>
+<ul><li>Basic crop monitoring</li><li>Weather updates</li><li>Email support</li></ul>
+<a class="plan-btn" href="./getstarted.html">Choose Plan</a>
+</div>
+<div class="price-card featured">
+<h3>Standard</h3><p>For growing farms</p>
+<div class="price">₹999 <small>/ month</small></div>
+<ul><li>Everything in Basic</li><li>Smart irrigation insights</li><li>Yield predictions</li><li>Priority support</li></ul>
+<a class="plan-btn" href="./getstarted.html">Choose Plan</a>
+</div>
+<div class="price-card">
+<h3>Premium</h3><p>For advanced farm management</p>
+<div class="price">₹1,999 <small>/ month</small></div>
+<ul><li>Everything in Standard</li><li>Satellite insights</li><li>Detailed farm reports</li><li>Dedicated assistance</li></ul>
+<a class="plan-btn" href="./getstarted.html">Choose Plan</a>
+</div>
+</div>
+<p class="demo-note">*These are sample prices for the college project demonstration.</p>
+</section>
+<section class="testimonials" id="testimonials">
+<h2 class="section-title">What Farmers Say</h2>
+<div class="testimonial-grid">
+<div class="testimonial-card"><div class="stars">★★★★★</div><p>“The crop monitoring dashboard helps me understand my field conditions more easily.”</p><h3>Ramesh Patel</h3><small>Farmer · Sample project testimonial</small></div>
+<div class="testimonial-card"><div class="stars">★★★★★</div><p>“The irrigation insights make it easier to plan water use for my crops.”</p><h3>Sunita Verma</h3><small>Farmer · Sample project testimonial</small></div>
+<div class="testimonial-card"><div class="stars">★★★★★</div><p>“I like having farm information and useful tools together in one place.”</p><h3>Arjun Singh</h3><small>Farmer · Sample project testimonial</small></div>
+</div>
+<p class="demo-note">*Names and reviews are illustrative examples created for this project demo.</p>
+</section>
+<section class="faq" id="faq">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="faq-list">
+<div class="faq-item"><button class="faq-question" aria-expanded="false">What is AgriNova?<span>+</span></button><div class="faq-answer">AgriNova is a smart agriculture website concept that brings crop monitoring, irrigation insights and farm information together.</div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">How can AgriNova help farmers?<span>+</span></button><div class="faq-answer">It presents tools and information designed to help farmers monitor crops, plan irrigation and understand possible yield trends.</div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Do I need to create an account?<span>+</span></button><div class="faq-answer">You can use the Get Started page to explore the sample registration flow included in this project.</div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Are the plans and prices real?<span>+</span></button><div class="faq-answer">No. The plans and prices on this college project website are sample content for demonstration purposes.</div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">How can I contact AgriNova?<span>+</span></button><div class="faq-answer">Visit the Contact page and use the contact details and form shown there.</div></div>
+</div>
+</section>
+<section class="cta">
+<h2>Revolutionize Your <span>Farming</span> Today</h2>
+<p>Join thousands of farmers using AgriNova technology.</p>
+<a href="./joinnow.html">Join Now</a>
+</section>
+<footer>
+<div class="footer-container">
+<div>
+<div class="footer-logo">🌱 Agri<span>Nova</span></div>
+<p class="logo-p">Smart Farming. Sustainable Future.</p>
+</div>
+<div class="footer-links">
+<h3>Quick Links</h3>
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./service.html">Services</a>
+<a href="./solutions.html">Solutions</a>
+<a href="./contact.html">Contact</a>
+</div>
+<div class="contact">
+<h3>Contact</h3>
+<p>hello@agrinova.com</p>
+<p>+91 9876543210</p>
+<p>Indore, India</p>
+</div>
+</div>
+<div class="copyright">
+© 2026 AgriNova. All Rights Reserved.
+</div>
+</footer>
+<script>
+// FAQ accordion: open the selected answer and close the others.
+document.querySelectorAll('.faq-question').forEach(function(button){
+  button.addEventListener('click', function(){
+    const currentItem = button.parentElement;
+    const willOpen = !currentItem.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(item){
+      item.classList.remove('open');
+      item.querySelector('.faq-question').setAttribute('aria-expanded','false');
+    });
+    if(willOpen){
+      currentItem.classList.add('open');
+      button.setAttribute('aria-expanded','true');
+    }
+  });
+});
+</script>
+</body>
+</html>

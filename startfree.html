@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Free | AgriNova</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;
+font-family:Arial,sans-serif;}
+body{display:flex;justify-content:center;align-items:center;min-height:100vh;background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNag1VTpcgEDfEEv3PHUwWYGN6g3fAMjVRJEDiy92OuQ&s=10');background-repeat: no-repeat;background-size: cover;background-position: center;}
+.container{
+background:gold;
+padding:40px;
+width:400px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;}
+h1{color:#16A34A;margin-bottom:10px;}
+p{color:#666;margin-bottom:25px;}
+input{width:100%;padding:12px;margin-bottom:15px;border:1px solid #ddd;border-radius:8px;}
+button{width:100%;padding:12px;background:#16A34A;color:white;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#15803D;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Start Free</h1>
+<p>Create your free AgriNova account</p>
+<form id="signupForm">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="password" placeholder="Password" required>
+<button type="submit">
+Create Free Account
+</button>
+</form>
+</div>
+<script>
+document.getElementById("signupForm")
+.addEventListener("submit",function(e){
+e.preventDefault();
+alert("Welcome to AgriNova! Your free account has been created.");
+});
+</script>
+</body>
+</html>
